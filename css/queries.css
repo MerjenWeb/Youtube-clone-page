@@ -1,0 +1,105 @@
+/* BELOW 1300px */
+
+@media (max-width: 82em) {
+  .wrapper-aside {
+    background-color: rgba(255, 255, 255);
+    transform: translateX(-100%);
+    transition: all 0.5s ease-in-out;
+    /* To hide the navigation properly, without using display:none, we have to 
+    1) Hide it visually; */
+    opacity: 0;
+    /* 2) Make it unaccessible to mouse and keyboard (even if it's visually hidden, things like keyboard tabs can still end up there)*/
+    pointer-events: none;
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .active.wrapper-aside {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateY(0%);
+  }
+
+  aside {
+    width: 0;
+  }
+}
+
+@media (max-width: 41em) {
+  .active-search.header {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+  }
+  .header {
+    gap: 1.6rem;
+  }
+
+  .active-search .header-start,
+  .active-search .header-end {
+    display: none;
+  }
+
+  .active-search .search-bar-box {
+    position: absolute;
+    width: 80%;
+    margin-left: 5rem;
+    border: 1px solid #cecece;
+    border-radius: 3rem;
+  }
+
+  .active-search .search-input {
+    display: flex;
+  }
+
+  .active-search .search-btn {
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    padding: 0.5rem 1rem;
+    background-color: #f8f8f8;
+    border-left: 1px solid #cecece;
+    transition: all 0.2s;
+  }
+
+  .active-search .back-icon {
+    z-index: 1;
+    display: flex;
+    position: absolute;
+    left: 1rem;
+  }
+
+  .active-search .search-btn:hover {
+    border-radius: 0;
+  }
+
+  .search-bar-box {
+    border: none;
+    justify-content: flex-end;
+    border-radius: 0;
+  }
+
+  .search-input {
+    display: none;
+    border: none;
+  }
+
+  .search-btn {
+    padding: 0.5rem 0.8rem;
+    border-radius: 50%;
+    background-color: #fff;
+    border: none;
+  }
+
+  .search-btn:hover {
+    cursor: pointer;
+    background-color: #f0f0f0;
+  }
+
+  .mic-icon {
+    justify-items: flex-end;
+    padding: 0.5rem 0.8rem;
+  }
+} ;

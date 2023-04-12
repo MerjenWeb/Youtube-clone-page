@@ -1,0 +1,474 @@
+/* - Font Sizes (px): 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+/* Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 
+
+Greys:  
+#1b1b1b
+#797979 
+#cecece
+#e7e7e7
+#f8f8f8
+#f0f0f0
+*/
+
+/* ********************* */
+/*         GLOBAL        */
+/* ********************* */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #1b1b1b;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 1.6rem; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #797979; /* color of the scroll thumb */
+  border-radius: 2.4rem; /* roundness of the scroll thumb */
+  border: 0.4rem solid #fff; /* creates padding around scroll thumb */
+}
+
+/* ********************* */
+/*     HEADER SECTION    */
+/* ********************* */
+.header {
+  z-index: 9999;
+  height: 5.4rem;
+  width: 100%;
+  position: fixed;
+  background-color: #fff;
+  padding: 0 2.4rem 0 1.6rem;
+  display: flex;
+  gap: 2.4rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  width: 12rem;
+  height: 5.6rem;
+  padding: 1.8rem 1.4rem 1.8rem 1.6rem;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-size {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.header-icon-box {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.header-icon-box:hover {
+  background-color: #e7e7e7;
+  cursor: pointer;
+}
+
+/* FIX SEARCH BAR */
+.header-center {
+  gap: 1.6rem;
+  width: 45%;
+}
+
+.header-center *:focus {
+  outline: none;
+}
+
+.search-bar-box {
+  height: 4rem;
+  width: 90%;
+  border: 1px solid #cecece;
+  border-radius: 3rem;
+  overflow: hidden;
+}
+
+.search-input {
+  width: 100%;
+  height: 100%;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.6rem;
+  border-radius: 3rem 0 0 3rem;
+  border: 1px solid #fff;
+  box-shadow: inset 0px 1px 2px rgba(238, 238, 238, 0.499);
+  font-family: inherit;
+}
+
+.search-input::placeholder {
+  font-weight: 200;
+  color: #a3a3a3c0;
+}
+
+.search-input:focus,
+.search-input:active {
+  border: 1px solid #1c62b9;
+  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.back-icon {
+  display: none;
+  background-color: #fff;
+  border: none;
+  transition: all 0.2s;
+}
+
+.search-btn {
+  height: 100%;
+  border: none;
+  padding: 0.5rem 2rem;
+  background-color: #f8f8f8;
+  border-left: 1px solid #cecece;
+  transition: all 0.2s;
+}
+
+.search-btn:hover {
+  cursor: pointer;
+  background-color: #f0f0f0;
+}
+
+.search-icon {
+  color: #1b1b1b;
+}
+
+/* PROBLEM ENDS HERE */
+
+.header-end {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.end-icon {
+  width: 4rem;
+  height: 4rem;
+}
+
+.end-icon--notification {
+  position: relative;
+}
+
+.end-icon--notification::after {
+  content: '1';
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #c00;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.8rem;
+  right: 0.5rem;
+  transform: translate(10%, -10%);
+}
+
+.end-icon--person {
+  border-radius: 50%;
+  width: 3.2rem;
+  height: 3.2rem;
+  cursor: pointer;
+}
+
+/* ********************* */
+/*      ASIDE SECTION    */
+/* ********************* */
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+aside {
+  width: 22rem;
+}
+
+.wrapper-aside {
+  /* this one needs more thinking */
+  position: fixed;
+  padding-left: 1.6rem;
+  padding-bottom: 2rem;
+  height: calc(100% - 5.4rem);
+  overflow-y: hidden;
+}
+
+.wrapper-aside:hover {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.wrapper-aside::-webkit-scrollbar {
+  width: 1.6rem; /* width of the entire scrollbar */
+}
+
+.wrapper-aside::-webkit-scrollbar-track {
+  background: transparent; /* color of the tracking area */
+}
+
+.wrapper-aside::-webkit-scrollbar-thumb {
+  background-color: #9b9b9b; /* color of the scroll thumb */
+  border-radius: 2.4rem; /* roundness of the scroll thumb */
+  border: 0.4rem solid #fff; /* creates padding around scroll thumb */
+}
+
+.space {
+  height: 5.4rem;
+  /* width: 100vw; */
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  border: none;
+  background-color: #eee;
+}
+
+.aside-items {
+  padding: 1.2rem 0;
+  padding-right: 1.6rem;
+}
+
+.text-truncate {
+  width: 15rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.aside-section-heading {
+  padding: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #222;
+}
+
+.aside-link {
+  transition: all 0.2s;
+}
+
+.aside-link:link,
+.aside-link:visited {
+  text-decoration: none;
+  color: inherit;
+  border-radius: 9px;
+  padding: 0.8rem;
+}
+
+.aside-link:hover,
+.aside-link:active {
+  background-color: #f0f0f0;
+  color: inherit;
+}
+
+.aside-dropdown {
+  background: none;
+  border: none;
+  border-radius: 9px;
+  padding: 0.8rem;
+  font-family: inherit;
+  color: inherit;
+}
+
+.aside-dropdown:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.dropdown-less-library,
+.aside-saved-playlists {
+  display: none;
+}
+
+.active-dropdown-library .dropdown-less-library,
+.active-dropdown-library .aside-saved-playlists {
+  display: flex;
+}
+
+.active-dropdown-library .dropdown-more-library {
+  display: none;
+}
+
+.aside-item-flex {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.aside-item-description {
+  font-size: 1.4rem;
+  line-height: 2;
+}
+
+.subscription-image {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+}
+
+.aside-browse-channels,
+.aside-show-less,
+.aside-dropdown-channel {
+  display: none;
+}
+
+.active-dropdown-subscriptions .aside-browse-channels,
+.active-dropdown-subscriptions .aside-show-less,
+.active-dropdown-subscriptions .aside-dropdown-channel {
+  display: flex;
+}
+
+.active-dropdown-subscriptions .aside-show-more {
+  display: none;
+}
+
+/* ********************* */
+/*  ASIDE FOOTER SECTION */
+/* ********************* */
+.aside-footer {
+  width: 22rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  gap: 1.2rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  display: inline-block;
+  padding-right: 0.5rem;
+  text-decoration: none;
+  color: #606060;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+/* add other stuff as well */
+.footer-link:hover,
+.footer-link:active {
+  cursor: pointer;
+}
+
+.footer-copyright {
+  font-size: 1.2rem;
+  color: #909090;
+}
+
+/* ********************* */
+/*  MAIN CONTENT SECTION */
+/* ********************* */
+
+main {
+  margin-left: 2.6rem;
+}
+
+.feed-filter-bar {
+  position: sticky;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  gap: 1.6rem;
+  margin-top: 1.8rem;
+}
+
+.feed-filter-bar p {
+  font-size: 1.4rem;
+  border-radius: 9px;
+  padding: 1rem 1.2rem;
+  background-color: #f0f0f0;
+  color: #1b1b1b;
+}
+
+.yt-content {
+  margin-top: 3rem;
+  margin-right: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  column-gap: 4.2rem;
+}
+
+.yt-content-box {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  row-gap: 1.8rem;
+}
+
+.yt-content-img {
+  grid-column: 1 / -1;
+  border-radius: 11px;
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.yt-content-img:hover {
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.yt-channel-icon {
+  border-radius: 50%;
+  margin-right: 1.4rem;
+}
+
+.yt-content-description {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.yt-content-heading {
+  font-size: 1.6rem;
+  font-weight: 500;
+  width: 30rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.yt-channel-data {
+  font-size: 1.4rem;
+  color: #606060;
+}
+
+.yt-content-heading:hover,
+.yt-channel-data:hover,
+.yt-channel-icon:hover {
+  cursor: pointer;
+}
