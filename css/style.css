@@ -454,6 +454,7 @@ main {
 }
 
 .yt-content-box {
+  margin: 3rem;
   display: grid;
   grid-template-columns: 1fr 5fr;
   row-gap: 1.4rem;
