@@ -25,14 +25,25 @@
   aside {
     width: 0;
   }
+
+  .feed-filter-bar {
+    margin-left: 3rem;
+  }
+
+  .grid-container {
+    grid-template-columns: 1rem auto;
+  }
 }
 
+/* BELOW 656px */
+
 @media (max-width: 41em) {
-  .active-search.header {
+  .active-search .header-wrapper {
     position: relative;
     display: flex;
     justify-content: space-around;
   }
+
   .header {
     gap: 1.6rem;
   }
@@ -102,4 +113,31 @@
     justify-items: flex-end;
     padding: 0.5rem 0.8rem;
   }
-} ;
+}
+
+/* BELOW 528px */
+@media (max-width: 33rem) {
+  .header-wrapper,
+  .header-center,
+  .header-end {
+    gap: 0;
+  }
+
+  .header {
+    padding-bottom: 0rem;
+  }
+
+  .mic-icon,
+  .end-icon-create,
+  .end-icon--notification {
+    display: none;
+  }
+}
+
+/* BELOW 414px */
+
+@media (max-width: 26em) {
+  .yt-content {
+    padding: 4rem 1rem;
+  }
+}
